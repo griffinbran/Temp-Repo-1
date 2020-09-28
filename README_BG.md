@@ -23,6 +23,24 @@ This project aims to identify trends indicating a performance advantage on the S
 * [`act_2019_ca.csv`](../data/act_2019_ca.csv): 2019 ACT Scores in California by School ([source](https://www.cde.ca.gov/ds/sp/ai/) | [data dictionary](https://www.cde.ca.gov/ds/sp/ai/reclayoutact19.asp))
 * [`sat_2019_ca.csv`](../data/sat_2019_ca.csv): 2019 SAT Scores in California by School ([source](https://www.cde.ca.gov/ds/sp/ai/) | [data dictionary](https://www.cde.ca.gov/ds/sp/ai/reclayoutsat19.asp))
 
+### Data Dictionary
+
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|**district_name**|*object*|2018-19 CA Dept. of Edu.|The name of the California Public School District.| 
+|**enrolled_seniors_x**|*integer*|2018-19 CA Dept. of Edu.|The number of 12th grade students enrolled in the School District in the 2018-19 School Year from SAT records.|
+|**tested_seniors_x**|*integer*|2018-19 CA Dept. of Edu.|The number of 12th grade students that took the SAT in the 2018-2019 school year.| 
+|**num_over_benchmark_sat**|*integer*|2018-19 CA Dept. of Edu.|The number of 12th grade students, per School District, that took the SAT and scored above the mean combined score threshold set by the College Board.|
+|**pct_over_benchmark_sat**|*float*|2018-19 CA Dept. of Edu.|The percent of 12th grade students, per School District, that took the SAT and scored above the mean combined score threshold set by the College Board.| 
+|**enrolled_seniors_y**|*integer*|2018-19 CA Dept. of Edu.|The number of 12th grade students enrolled in the School District in 2018-19 from ACT records.|
+|**tested_seniors_y**|*integer*|2018-19 CA Dept. of Edu.|The number of 12th grade students, in each School District, that took the ACT in the 2018-19 school year.| 
+|**num_over_benchmark_act**|*integer*|2018-19 CA Dept. of Edu.|The number of 12th grade students, per School District, that took the ACT in 2018-19 AND scored a composite score greater than or equal to 21.|
+|**pct_over_benchmark_act**|*float*|2018-19 CA Dept. of Edu.|The percent of 12th grade students, per School District, that took the ACT and scored a composite score of at least 21.| 
+|**rank**|*integer*|2018 census|The order of CA Public School District's "equity", where rank-1 indicates the so-called "most equitable school district".|
+|**score**|*float*|2018 census|The equity grade of each School District as determined by an absolute difference in School District Expenditures per Pupil and Mean Household Income in each School District (i.e. the highest "score" corresponds to the so-called least equitable district).| 
+|**expenditures_per_pupil**|*integer*|2018 Census|The amount a school district spends per pupil based on data from the U.S. Census: Annual Survey of School System Finances.This is used to score public school districts by comparison to the CA State average. A given score is based on 50 and, for each % above(below) the average expenditure per pupil across the sate, one point is subtracted(added).|
+|**income**|*integer*|2018 census|The average household income by school district. This is used to score public school districts by comparison to the CA State average. A given score is based on 50 and, for each % above(below) the state average income, one point is added(subtracted). | 
+
 #### Additional Data
 
 * [`equitable_county_rank.csv`](../data/equitable_county_rank.csv): 2019 California School District Equitablility Ranking ([source](https://wallethub.com/edu/e/most-least-equitable-school-districts-in-california/77056/))
